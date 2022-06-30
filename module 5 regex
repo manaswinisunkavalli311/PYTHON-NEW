@@ -1,0 +1,388 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled6.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyPN5S/QyUTGd2qV3Giuy8In",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/manaswinisunkavalli311/PYTHON-NEW/blob/main/module%205%20regex\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FYf2CCVkySIB",
+        "outputId": "19caf8f6-27d7-4c1e-b08b-d4b3afa2ef74"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "YES! We have a match!\n"
+          ]
+        }
+      ],
+      "source": [
+        "# search functiion\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.search(\"^The.*Spain$\", txt)\n",
+        "if x:\n",
+        "  print(\"YES! We have a match!\")\n",
+        "else:\n",
+        "  print(\"No match\")\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#findall function\n",
+        "import re\n",
+        "txt = \"hi welcome\"\n",
+        "x = re.findall(\"e\", txt)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DZRYmWFoyUgB",
+        "outputId": "a0d8d04c-f879-4f95-9850-9d46712086bc"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['e', 'e']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# findall function\n",
+        "import re\n",
+        "txt = \"good morning\"\n",
+        "x = re.findall(\"Portugal\", txt)\n",
+        "print(x)\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UAjKJ6KNyUjq",
+        "outputId": "be7a30da-59a8-48ef-be65-5a32f1f0b6c6"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# search function\n",
+        "import re\n",
+        "txt = \" Spain\"\n",
+        "x = re.search(\"\\s\", txt)\n",
+        "print(\"The first white-space character is located in position:\", x.start())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8xxXu9V_yUnC",
+        "outputId": "8d9fb683-23a1-465d-95b7-5c3d1071a807"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The first white-space character is located in position: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# search function\n",
+        "import re\n",
+        "txt = \"The vishakapatnam\"\n",
+        "x = re.search(\"Portugal\", txt)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MKmke25lyUqL",
+        "outputId": "d82f3da7-2d82-4474-b784-82f0c28d0cca"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "None\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# split  function\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.split(\"\\s\", txt)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "M3P8HjwzLtJ7",
+        "outputId": "4fd19a21-6354-4381-eb88-407b9cf8eeef"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['The', 'rain', 'in', 'Spain']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# split function\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.split(\"\\s\", txt, 1)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5WXx8QEZLtNU",
+        "outputId": "71025148-9991-446b-e79a-8bc5f8b16dfb"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['The', 'rain in Spain']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# sub function\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.sub(\"\\s\", \"9\", txt)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VRCUCbjLLtQt",
+        "outputId": "dc2d0c0d-b18c-454a-8e2d-3d5e43b5d3e6"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The9rain9in9Spain\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# sub function\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.sub(\"\\s\", \"9\", txt, 2)\n",
+        "print(x)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HFPK6PmZL8jt",
+        "outputId": "25a8a935-febe-4629-91ef-e7ac554632fc"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The9rain9in Spain\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# search function\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.search(\"ai\", txt)\n",
+        "print(x)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KbEQM8kPL8oT",
+        "outputId": "6367dbe8-0392-453f-bad3-41611d7a3fc4"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<re.Match object; span=(5, 7), match='ai'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# search function\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.search(r\"\\bS\\w+\", txt)\n",
+        "print(x.span())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WkK7cpxfMJcr",
+        "outputId": "27172740-e44a-4151-c4b4-65f73f1f7415"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "(12, 17)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# search function\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.search(r\"\\bS\\w+\", txt)\n",
+        "print(x.string)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EB2FpmXcMJga",
+        "outputId": "3f47e76e-710a-4398-96ee-ac343aa9d005"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The rain in Spain\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# search function\n",
+        "import re\n",
+        "txt = \"The rain in Spain\"\n",
+        "x = re.search(r\"\\bS\\w+\", txt)\n",
+        "print(x.group())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5Nq2LhBQMKB6",
+        "outputId": "fbe7792d-de59-4fee-bac2-1bde79a327a0"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Spain\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
